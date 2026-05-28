@@ -222,6 +222,10 @@ public class SecurityRedisConfig {
      * @return TokenPair 包含 Access Token 和 Refresh Token
      */
     public TokenPair generateTokens(String username, List<String> roles) {
+
+//        redisTemplate.delete(ACCESS_TOKEN_PREFIX);
+//        redisTemplate.delete(REFRESH_TOKEN_PREFIX);
+
         String userId = UUID.randomUUID().toString();
         long currentTime = System.currentTimeMillis();
 
